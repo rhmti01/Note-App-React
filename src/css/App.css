@@ -1,0 +1,103 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.note-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--text-400);
+}
+
+.note-app {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.note-form {
+  gap: 1.5rem;
+  display: grid;
+}
+
+.add-new-note {
+  width: 30%;
+}
+
+.note-container {
+  width: 60%;
+}
+
+.note-status {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-400);
+  margin-bottom: 2rem;
+}
+
+.note-status span {
+  border-radius: 2rem;
+  display: inline-block;
+  background-color: var(--text-400);
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+  color: var(--text-100);
+}
+
+.note-item {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.note-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px solid var(--text-100);
+}
+
+.note-item.completed .title {
+  text-decoration: line-through;
+}
+
+.note-item.completed {
+  opacity: 80%;
+}
+
+.note-item__header .title {
+  font-size: 1.1rem;
+  color: var(--text-700);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.note-item__header .desc {
+  color: var(--text-400);
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+
+.note-item__header .actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.note-item__header .trash {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--rose-500);
+  background: none;
+}
+
+.note-item__footer {
+  color: var(--text-300);
+}

@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --bg-color: #f3f4f6;
+  --text-700: #374151;
+  --text-400: #94a3b8;
+  --text-100: #f3f4f6;
+  --text-300: #cbd5e1;
+  --white: #fff;
+  --primary-700: #4338ca;
+  --primary-600: #4f46e5;
+  --primary-100: #e0e7ff;
+  --rose-500: #f43f5e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  width: 100vw;
+  min-height: 100vh;
+}
+
+input {
+  display: block;
+  outline: none;
+  border: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+p {
+  text-align: left;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: var(--text-700);
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-700);
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+select {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid var(--text-400);
+  border-radius: 0.75rem;
+  font-weight: 700;
+  color: var(--text-700);
+}
+
+.text-field {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-700);
+  font-size: 1rem;
+}
+.btn {
+  border-radius: 0.5rem;
+  padding: 1rem 1rem;
+}
+
+.btn--primary {
+  background-color: var(--primary-600);
+  color: white;
+  font-size: 1rem;
+}
