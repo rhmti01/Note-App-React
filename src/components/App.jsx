@@ -1,11 +1,14 @@
+import AddNewNote from "./AddNewNote.jsx";
 import "/src/css/App.css";
+import "/src/css/index.css";
 function App() {
   return (
-    <div className="container" >
-      <div className="note-header">note header</div>
-      <div className="note-app">
-        <div className="add-new-note">add new note</div>
-        <div className="note-container">notes</div>
+    <div className=" w-full max-w-screen-xl flex items-center flex-col  " >
+      {/* note header */}
+      Note Header
+      <div className=" flex items-center justify-around w-full bg-yellow-100/ ">
+        <AddNewNote/>
+        <div className="">notes</div>
       </div>
     </div>
   )
