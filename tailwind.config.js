@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -12,10 +13,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        outfit: ['Outfit'],
+        outfit: ['Outfit','Vazirmatn'],
         vazir: ['Vazirmatn']
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    // ...
+  ],
 }
