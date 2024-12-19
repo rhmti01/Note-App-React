@@ -23,7 +23,7 @@ function AddNewNote({ onAddNote }) {
 
 
     return (
-        <div className="my-3 basis-1/3 ">
+        <div className="my-3 basis-1/3 mt-12 ">
             <h1 className=" text-3xl font-extrabold "  >Add New Note</h1>
             <form className="mt-6 flex flex-col " onSubmit={handleSubmit}  >
                 <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Note Title ..." className="text-zinc-800 my-5 py-3 px-4 rounded-lg outline hover:shadow-sm placeholder-gray-500 outline-1 focus:outline-2 border-none focus:outline-offset-0  focus:outline-indigo-700 outline-white

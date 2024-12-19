@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* constume scrollbar */
+
+body::-webkit-scrollbar {
+  width: 8px;
+cursor: pointer;
+}
+
+body::-webkit-scrollbar-track {
+  background: #a6a5a9ab ;
+cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: #514e4c;
+border-radius: 10px;
+cursor: pointer;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+-ms-border-radius: 10px;
+-o-border-radius: 10px;
+}
+
+div::-webkit-scrollbar {
+width: 7px;
+height: 3px;
+cursor: pointer;
+}
+
+div::-webkit-scrollbar-track {
+  background: #d0c6c6 ;
+cursor: pointer;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #5a5f669c;
+  border-radius: 17px;
+  border: 2px solid #efefef00;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+  cursor: pointer;
+}
 .form-select {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAABGdBTUEAALGPC/xhBQAAAQtJREFUOBG1lEEOgjAQRalbGj2OG9caOACn4ALGtfEuHACiazceR1PWOH/CNA3aMiTaBDpt/7zPdBKy7M/DCL9pGkvxxVp7KsvyJftL5rZt1865M+Ucq6pyyF3hNcI7Cuu+728QYn/JQA5yKaempxuZmQngOwEaYx55nu+1lQh8GIatMGi+01NwBcEmhxBqK4nAPZJ78K0KKFAJmR3oPp8+Iwgob0Oa6+TLoeCvRx+mTUYf/FVBGTPRwDkfLxnaSrRwcH0FWhNOmrkWYbE2XEicqgSa1J0LQ+aPCuQgZiLnwewbGuz5MGoAhcIkCQcjaTBjMgtXGURMVHC1wcQEy0J+Zlj8bKAnY1/UzDe2dbAVqfXn6wAAAABJRU5ErkJggg==');
   background-size: 0.7rem;
