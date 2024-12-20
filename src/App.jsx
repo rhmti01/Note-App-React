@@ -14,13 +14,20 @@ function App() {
     setNotes((prevNotes) => prevNotes.filter((cmp) => cmp.id != removedNoteId))
   }
 
+  const handleCompleteNote = (e) => {
+    const noteId = Number(e.target.value)
+    setNotes((prevNotes) =>
+      prevNotes.map((note) =>
+        note.id === noteId ? { ...note, completed: !note.completed } : note))
+  }
+
   return (
     <div className=" w-full max-w-screen-xl flex items-center flex-col  " >
       {/* note header */}
-      <div className=" w-full h-16 bg-lime-50 rounded-lg " >note header</div>
+      <div className=" w-full h-16 bg-lime-50 rounded-lg flex items-center justify-center font-bold text-2xl " >Note Header</div>
       <div className=" flex items-start justify-around w-full bg-yellow-100/ ">
         <AddNewNote onAddNote={handleAddNote} />
-        <NoteList notes={notes} onRemoveNote={handleRemoveNote} />
+        <NoteList notes={notes} onRemoveNote={handleRemoveNote} onCompleteNote={handleCompleteNote} />
       </div>
     </div>
   )

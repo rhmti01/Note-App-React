@@ -26,14 +26,24 @@ cursor: pointer;
 }
 
 div::-webkit-scrollbar {
-width: 7px;
-height: 3px;
-cursor: pointer;
+  width: 7px;
+  height: 3px;
+  cursor: pointer;
+
+}
+
+div.scrollbar-hovered ::-webkit-scrollbar {
+  width: 12px; 
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  width: 16px; /* Increase the size of the scrollbar */
+  background-color: #555; /* Change color on hover */
 }
 
 div::-webkit-scrollbar-track {
   background: #d0c6c6 ;
-cursor: pointer;
+  cursor: pointer;
 }
 
 div::-webkit-scrollbar-thumb {
