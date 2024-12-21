@@ -1,9 +1,9 @@
 import NoteItem from "./NoteItem"
 
-function NoteList({ notes, onRemoveNote, onCompleteNote }) {
+function NoteList({ sortedNotes, onRemoveNote, onCompleteNote }) {
   return (
     <div className="  bg-black/ px-3 w-full h-auto flex items-center justify-start  flex-col mt-6 max-h-[480px] overflow-y-auto  " >
-      {notes.map((note) =>
+      {sortedNotes.map((note) =>
       (<NoteItem
         key={note.id}
         note={note}

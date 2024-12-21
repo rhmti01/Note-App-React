@@ -13,7 +13,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        outfit: ['Outfit','Vazirmatn'],
+        outfit: ['Outfit', 'Vazirmatn'],
         vazir: ['Vazirmatn']
       },
     },
