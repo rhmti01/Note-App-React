@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AddNewNote from "./components/AddNewNote.jsx";
 import NoteList from "./components/NoteList.jsx";
+import NoteStatus from "./components/NoteStatus.jsx"
 import "/src/App.css";
 import "/src/index.css";
 function App() {
@@ -27,7 +28,10 @@ function App() {
       <div className=" w-full h-16 bg-lime-50 rounded-lg flex items-center justify-center font-bold text-2xl " >Note Header</div>
       <div className=" flex items-start justify-around w-full bg-yellow-100/ ">
         <AddNewNote onAddNote={handleAddNote} />
-        <NoteList notes={notes} onRemoveNote={handleRemoveNote} onCompleteNote={handleCompleteNote} />
+        <div className=" basis-[50%] bg-slate-30   w-full  my-3  " >
+          <NoteStatus notes={notes} />
+          <NoteList notes={notes} onRemoveNote={handleRemoveNote} onCompleteNote={handleCompleteNote} />
+        </div>
       </div>
     </div>
   )
