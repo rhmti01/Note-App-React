@@ -5,13 +5,15 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  // safelist: [
-  //   'outline',
-  //   'outline-2',
-  //   'outline-indigo-700',
-  // ],
   theme: {
     extend: {
+      screens:{
+        'xg' : "1080px",
+        'xx' : "970px",
+      },
+      maxWidth: {
+        'xll': '1100px',
+      },
       fontFamily: {
         outfit: ['Outfit', 'Vazirmatn'],
         vazir: ['Vazirmatn']

@@ -88,6 +88,10 @@ body {
   min-height: 100vh;
 }
 
+#root{
+  padding: 0%;
+}
+
 input {
   display: block;
   outline: none;
