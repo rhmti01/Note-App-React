@@ -74,13 +74,13 @@ function App() {
   }
 
   return (
-    <div className=" w-full 2xl:max-w-screen-xl xl:max-w-xll  flex items-center flex-col  " >
+    <div className=" w-full 2xl:max-w-screen-xl xl:max-w-xll  flex items-center flex-col pb-40 " >
       <NoteHeader
         sortBy={sortBy}
         onSortNotes={handleSortChange} />
-      <div className=" flex items-start justify-evenly w-full bg-yellow-50/ 2xl:mt-2 xl:mt-1 ">
+      <div className=" flex xx:items-start sm:items-center xx:gap-y-0 gap-y-9 justify-evenly xx:flex-row sm:flex-col  w-full bg-yellow-50/ 2xl:mt-2 xl:mt-1  ">
         <AddNewNote onAddNote={handleAddNote} />
-        <div className=" xl:basis-[50%] xg:basis-[47%] xx:basis-[50%] bg-slate-30 w-full my-3  " >
+        <div className=" xg:basis-[47%] xx:basis-[50%] xx:w-full  sm:w-[470px] bg-slate-30 w-full my-3  " >
           <NoteStatus notes={notes} />
           <NoteList
             sortedNotes={handleSortNotes()}
