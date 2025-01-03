@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fix background change on dark theme */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: #EAEAED; 
+  }
+}
 
 /* constume scrollbar */
 
