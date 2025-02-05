@@ -5,7 +5,7 @@
 /* fix background change on dark theme */
 @media (prefers-color-scheme: dark) {
   body {
-      background-color: #EAEAED; 
+    background-color: #EAEAED !important ;
   }
 }
 
@@ -13,22 +13,22 @@
 
 body::-webkit-scrollbar {
   width: 8px;
-cursor: pointer;
+  cursor: pointer;
 }
 
 body::-webkit-scrollbar-track {
-  background: #a6a5a9ab ;
-cursor: pointer;
+  background: #a6a5a9ab;
+  cursor: pointer;
 }
 
 body::-webkit-scrollbar-thumb {
-background-color: #514e4c;
-border-radius: 10px;
-cursor: pointer;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
--ms-border-radius: 10px;
--o-border-radius: 10px;
+  background-color: #514e4c;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 div::-webkit-scrollbar {
@@ -39,16 +39,18 @@ div::-webkit-scrollbar {
 }
 
 div.scrollbar-hovered ::-webkit-scrollbar {
-  width: 12px; 
+  width: 12px;
 }
 
 div::-webkit-scrollbar-thumb:hover {
-  width: 16px; /* Increase the size of the scrollbar */
-  background-color: #555; /* Change color on hover */
+  width: 16px;
+  /* Increase the size of the scrollbar */
+  background-color: #555;
+  /* Change color on hover */
 }
 
 div::-webkit-scrollbar-track {
-  background: #d0c6c6 ;
+  background: #d0c6c6;
   cursor: pointer;
 }
 
@@ -62,11 +64,13 @@ div::-webkit-scrollbar-thumb {
   -o-border-radius: 11px;
   cursor: pointer;
 }
+
 .form-select {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAABGdBTUEAALGPC/xhBQAAAQtJREFUOBG1lEEOgjAQRalbGj2OG9caOACn4ALGtfEuHACiazceR1PWOH/CNA3aMiTaBDpt/7zPdBKy7M/DCL9pGkvxxVp7KsvyJftL5rZt1865M+Ucq6pyyF3hNcI7Cuu+728QYn/JQA5yKaempxuZmQngOwEaYx55nu+1lQh8GIatMGi+01NwBcEmhxBqK4nAPZJ78K0KKFAJmR3oPp8+Iwgob0Oa6+TLoeCvRx+mTUYf/FVBGTPRwDkfLxnaSrRwcH0FWhNOmrkWYbE2XEicqgSa1J0LQ+aPCuQgZiLnwewbGuz5MGoAhcIkCQcjaTBjMgtXGURMVHC1wcQEy0J+Zlj8bKAnY1/UzDe2dbAVqfXn6wAAAABJRU5ErkJggg==');
   background-size: 0.7rem;
   background-position: right 0.7rem center;
 }
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --bg-color: #f3f4f6;
@@ -94,7 +98,7 @@ body {
   min-height: 100vh;
 }
 
-#root{
+#root {
   padding: 0%;
 }
 
@@ -109,6 +113,7 @@ button {
   border: none;
   cursor: pointer;
 }
+
 p {
   text-align: left;
 }
@@ -150,6 +155,7 @@ select {
   color: var(--text-700);
   font-size: 1rem;
 }
+
 .btn {
   border-radius: 0.5rem;
   padding: 1rem 1rem;

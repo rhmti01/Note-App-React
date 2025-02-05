@@ -4,7 +4,7 @@ function NoteStatus({ notes }) {
     const completedNotesLength = notes.filter((note) => note.completed).length
     const openNotesLength = notes.filter((note) => note.completed == false).length
 
-    if (!notes.length) return <h2 className=" xx:w-full mx-auto font-bold 2xl:text-2xl xl:text-[22px] xg:text-[21px] xx:text-[21px] mm:text-[21px] ss:text-[18px] 2xl:mt-44 xl:mt-40 xg:mt-40 xx:mt-36 mm:mt-12 ss:mt-10 text-zinc-700 " >No Notes Has Already Been Added !</h2>
+    if (!notes.length) return <h2 className=" xx:w-full mx-auto font-bold 2xl:text-2xl xl:text-[22px] xg:text-[21px] xx:text-[21px] mm:text-[21px] ss:text-[18px] 2xl:mt-44 xl:mt-40 xg:mt-40 xx:mt-36 mm:mt-12 ss:mt-10 text-zinc-700 px-3 " >No Notes Has Already Been Added!</h2>
 
     return (
         <div>
