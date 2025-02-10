@@ -1,5 +1,83 @@
 @import 'tailwindcss';
 
+@plugin "@tailwindcss/forms";
+
+@theme {
+  /* Break points */
+  --breakpoint-xg: 1080px;
+    --breakpoint-xx: 970px;
+    --breakpoint-ww: 630px;
+    --breakpoint-mm: 530px;
+    --breakpoint-rr: 375px;
+    --breakpoint-ss: 290px;
+    /* costum font */
+    --font-outfit: "Outfit", "sans-serif"; 
+    --font-vazir: "Vazirmatn"; 
+}
+
+@layer base {
+  body::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #a6a5a9ab;
+    cursor: pointer;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #514e4c;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  
+  div::-webkit-scrollbar {
+    width: 7px;
+    height: 3px;
+    cursor: pointer;
+  
+  }
+  
+  div.scrollbar-hovered ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  div::-webkit-scrollbar-thumb:hover {
+    width: 16px;
+    /* Increase the size of the scrollbar */
+    background-color: #555;
+    /* Change color on hover */
+  }
+  
+  div::-webkit-scrollbar-track {
+    background: #d0c6c6;
+    cursor: pointer;
+  }
+  
+  div::-webkit-scrollbar-thumb {
+    background-color: #5a5f669c;
+    border-radius: 17px;
+    border: 2px solid #efefef00;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+    cursor: pointer;
+  }
+  
+  .form-select {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAABGdBTUEAALGPC/xhBQAAAQtJREFUOBG1lEEOgjAQRalbGj2OG9caOACn4ALGtfEuHACiazceR1PWOH/CNA3aMiTaBDpt/7zPdBKy7M/DCL9pGkvxxVp7KsvyJftL5rZt1865M+Ucq6pyyF3hNcI7Cuu+728QYn/JQA5yKaempxuZmQngOwEaYx55nu+1lQh8GIatMGi+01NwBcEmhxBqK4nAPZJ78K0KKFAJmR3oPp8+Iwgob0Oa6+TLoeCvRx+mTUYf/FVBGTPRwDkfLxnaSrRwcH0FWhNOmrkWYbE2XEicqgSa1J0LQ+aPCuQgZiLnwewbGuz5MGoAhcIkCQcjaTBjMgtXGURMVHC1wcQEy0J+Zlj8bKAnY1/UzDe2dbAVqfXn6wAAAABJRU5ErkJggg==');
+    background-size: 0.7rem;
+    background-position: right 0.7rem center;
+  }
+}
+
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -8,7 +86,8 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
-@layer base {
+/* @layer base {
+
   *,
   ::after,
   ::before,
@@ -16,9 +95,9 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-}
+} */
 
-@layer base {
+/* @layer base {
   :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -26,22 +105,23 @@
 
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    background-color: #535bf2;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-}
+} */
 
 /* tailwind directives  */
-
+/* 
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -70,9 +150,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -83,10 +165,12 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
-}
+} */

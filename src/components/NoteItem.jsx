@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 function NoteItem({ note, onRemoveNote, onCompleteNote }) {
     const options = {
@@ -21,7 +22,7 @@ function NoteItem({ note, onRemoveNote, onCompleteNote }) {
                         checked={note.completed}
                         onChange={onCompleteNote}
                         value={note.id} id={note.id}
-                        type="checkbox" className=" 2xl:size-4 xl:size-3.5 mm:size-3.5 ss:size-3.5 text-gray-500 bg-gray-100 rounded-md ring-1 ring-gray-500 cursor-pointer  focus:ring-zinc-500" />
+                        type="checkbox" className=" 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[10px] cursor-pointer  accent-gray-700 ring-1 outline-none ring-offset-0 " />
                     <svg
                         onClick={() => onRemoveNote(note.id)}
                         className=" cursor-pointer xl:size-8 mm:size-[32px] ss:size-[30px] stroke-red-600 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" >

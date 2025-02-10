@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 
 function NoteHeader({ sortBy, onSortNotes }) {
 
@@ -20,5 +21,4 @@ function NoteHeader({ sortBy, onSortNotes }) {
 }
 
 export default NoteHeader
-
 
