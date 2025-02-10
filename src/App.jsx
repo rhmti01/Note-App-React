@@ -74,7 +74,7 @@ function App() {
   }
 
   return (
-    <div className=" w-full 2xl:max-w-screen-xl xl:max-w-xll  flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10 " >
+    <div className=" w-full 2xl:max-w-[1280px] xl:max-w-[1100px]  flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10 " >
       <NoteHeader
         sortBy={sortBy}
         onSortNotes={handleSortChange} />
