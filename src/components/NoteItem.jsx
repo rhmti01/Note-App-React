@@ -22,7 +22,7 @@ function NoteItem({ note, onRemoveNote, onCompleteNote }) {
                         checked={note.completed}
                         onChange={onCompleteNote}
                         value={note.id} id={note.id}
-                        type="checkbox" className=" 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[10px] cursor-pointer  accent-gray-700 dark:bg-slate-700 dark:accent-slate-100 ring-1 outline-none ring-offset-0 " />
+                        type="checkbox" className=" 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[10px] cursor-pointer  accent-gray-700 dark:bg-gray-500  dark:accent-slate-100 ring-1 outline-0 border-0 ring-offset-0 " />
                     <svg
                         onClick={() => onRemoveNote(note.id)}
                         className=" cursor-pointer xl:size-8 mm:size-[32px] ss:size-[30px] stroke-red-600 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" >
