@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import NoteItem from "./NoteItem.jsx"
 
 function NoteList({ sortedNotes, onRemoveNote, onCompleteNote }) {
