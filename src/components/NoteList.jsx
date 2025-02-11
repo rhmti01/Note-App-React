@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import NoteItem from "./NoteItem.jsx"
 
 function NoteList({ sortedNotes, onRemoveNote, onCompleteNote }) {
   return (
-    <div className=" px-3 w-full h-auto flex items-center justify-start  flex-col  max-h-[480px] overflow-y-auto  " >
+    <div className=" px-3 w-full h-auto flex items-center justify-start  flex-col  max-h-[480px] overflow-y-auto  dark:[&::-webkit-scrollbar-track]:bg-neutral-100  dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 " >
       {sortedNotes.map((note) =>
       (<NoteItem
         key={note.id}
