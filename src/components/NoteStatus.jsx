@@ -9,7 +9,7 @@ function NoteStatus({ notes }) {
 
     return (
         <div>
-            <ul className="flex justify-around items-center w-full shadow-mm xx:rounded-lg ss:rounded-xl  xl:my-3 xg:my-2.5 xx:my-3 mm:my-3 ss:my-3 py-2  mx-auto  bg-gradient-to-br from-white to-gray-100  dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950  " >
+            <ul className="flex justify-around items-center w-full shadow-mm xx:rounded-lg ss:rounded-xl  xl:my-3 xg:my-2.5 xx:my-3 mm:my-3 ss:my-3 py-2  mx-auto  bg-gradient-to-br from-white to-gray-100  dark:bg-gradient-to-br dark:from-[#0a1022] dark:to-[#060a1a]  " >
                 <li className=" font-bold 2xl:text-[16px] xl:text-[15.5px] xg:text-[15px] xx:text-[14.5px] mm:text-[14.5px] ss:text-[14.5px] py-1 px-5  rounded-lg text-slate-900 dark:text-slate-100 " >
                     All <span className=" rr:inline-flex hidden 2xl:text-[14px] xl:text-[13px] xx:text-[12.5px] mm:text-[12px] ss:text-[11px] ml-1 px-2 py-1 text-white dark:text-slate-950 bg-zinc-800 dark:bg-slate-200  font-medium rounded-full " >{notes.length}</span>
                 </li>

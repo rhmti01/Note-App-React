@@ -3,8 +3,8 @@ import AddNewNote from "./components/AddNewNote.jsx";
 import NoteList from "./components/NoteList.jsx";
 import NoteStatus from "./components/NoteStatus.jsx"
 import NoteHeader from "./components/NoteHeader.jsx";
-import "/src/App.css";
 import "/src/index.css";
+import "/src/App.css";
 
 
 function App() {

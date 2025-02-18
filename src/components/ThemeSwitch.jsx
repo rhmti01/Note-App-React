@@ -27,10 +27,8 @@ function ThemeSwitch() {
   };
 
   if (storageTheme === "dark" || (!storageTheme && systemPrefersDark)) {
-    console.log(systemPrefersDark);
     document.documentElement.classList.add("dark")
   } else {
-    console.log(systemPrefersDark);
     document.documentElement.classList.remove("dark")
   }
 
