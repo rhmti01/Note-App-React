@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 
-function NoteItem({ note, onRemoveNote, onCompleteNote }) {
+function NoteItem({ note, onRemoveNote, onCompleteNote , onEditNote }) {
     const options = {
         year: "numeric",
         month: "long",
@@ -12,17 +12,24 @@ function NoteItem({ note, onRemoveNote, onCompleteNote }) {
 
     return (
         <div className={`  ${note.completed ? "bg-zinc-200 dark:bg-gray-800  ring-1 ring-slate-300 dark:ring-0  " : "bg-white dark:bg-slate-900/50   "}  w-full max-w-[575px] xg:my-2 xx:my-1.5 mm:my-1.5 ss:my-1 rounded-2xl shadow-mm   `}>
-            <div className={`  ${note.completed ? " drop-shadow-lg dark:drop-shadow-none " : " "}  flex items-center justify-between w-full   `} >
+            <div className={`  ${note.completed ? " drop-shadow-lg dark:drop-shadow-none " : " "}  flex items-center justify-between w-full ss:pr-2 xx:pr-2  `} >
                 <div className=" 2xl:pl-5  xx:pl-[18px] mm:pl-3.5 ss:pl-3 basis-3/4 max-w-[75%] flex items-start justify-around flex-col ">
                     <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-900 dark:text-zinc-100 "} w-full xl:mt-4 xx:mt-3 mm:mt-2.5 ss:mt-2 2xl:text-lg xg:text-[17.5px] xx:text-[17.5px] mm:text-[16.6px] ss:text-[16px] font-bold  text-lg break-words text-wrap `} >{note.title}</p>
                     <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-400 dark:text-zinc-300 "} w-full 2xl:text-base xl:text-[15.5px] xg:text-[15px] xx:text-[14.5px] mm:text-[15px] ss:text-[14.5px] 2xl:mt-2 xl:mt-1.5 ss:mt-1  font-light  ss:pr-7 mm:pr-0 break-words text-wrap `}  >{note.description} </p>
                 </div>
-                <div className=" flex items-center justify-evenly pt-3 basis-[15%]  xl:gap-x-0 xg:gap-x-1 mm:gap-x-2 ss:gap-x-2 mm:pr-2 ss:pr-2 xx:pr-0.5 ">
+                <div className="  flex items-center justify-around  pt-3 ss:basis-[22%] rr:basis-[20%] mm:basis-[19%] ww:basis-[23%] 2xl:basis-[21%] xl:gap-x-2.5 xg:gap-x-1.5 mm:gap-x-2 ss:gap-x-2   ">
+                    <div
+                        onClick={() => onEditNote(note.id)}
+                        class=" mx-1 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[9px] cursor-pointer  flex items-center justify-center  ring-[1.5px] outline-0 border-0 ring-offset-0 dark:ring-gray-300  ring-gray-600 " >
+                        <svg stroke="currentColor" class="  dark:stroke-gray-300 stroke-gray-700  w-3.5 h-3.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"  >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                        </svg>
+                    </div>
                     <input
                         checked={note.completed}
                         onChange={onCompleteNote}
                         value={note.id} id={note.id}
-                        type="checkbox" className=" 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[10px] cursor-pointer ring-gray-700  accent dark:bg-gray-500  dark:accent-slate-100 ring-1 outline-0 border-0 ring-offset-0 " />
+                        type="checkbox" className=" 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[10px] cursor-pointer ring-gray-700 accent-gray-700 accent dark:bg-gray-500  ring-1 outline-0 border-0 ring-offset-0 " />
                     <svg
                         onClick={() => onRemoveNote(note.id)}
                         className=" cursor-pointer xl:size-8 mm:size-[32px] ss:size-[30px] stroke-red-600 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" >
