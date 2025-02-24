@@ -73,4 +73,12 @@
     background-position: right 0.7rem center;
   }
 
+  .z110{
+    z-index: 110;
+  }
+
+  .z-1{
+    z-index: 1;
+  }
+
 }

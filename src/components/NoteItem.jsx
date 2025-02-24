@@ -11,7 +11,7 @@ function NoteItem({ note, onRemoveNote, onCompleteNote , onEditNote }) {
     }
 
     return (
-        <div className={`  ${note.completed ? "bg-zinc-200 dark:bg-gray-800  ring-1 ring-slate-300 dark:ring-0  " : "bg-white dark:bg-slate-900/50   "}  w-full max-w-[575px] xg:my-2 xx:my-1.5 mm:my-1.5 ss:my-1 rounded-2xl shadow-mm   `}>
+        <div className={`  ${note.completed ? "bg-zinc-200 dark:bg-gray-800  ring-1 ring-slate-300 dark:ring-0  " : "bg-white dark:bg-slate-900/50   "}  w-full max-w-[575px] xg:my-2 xx:my-1.5 mm:my-1.5 ss:my-1 rounded-2xl shadow-mm z-auto  `}>
             <div className={`  ${note.completed ? " drop-shadow-lg dark:drop-shadow-none " : " "}  flex items-center justify-between w-full ss:pr-2 xx:pr-2  `} >
                 <div className=" 2xl:pl-5  xx:pl-[18px] mm:pl-3.5 ss:pl-3 basis-3/4 max-w-[75%] flex items-start justify-around flex-col ">
                     <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-900 dark:text-zinc-100 "} w-full xl:mt-4 xx:mt-3 mm:mt-2.5 ss:mt-2 2xl:text-lg xg:text-[17.5px] xx:text-[17.5px] mm:text-[16.6px] ss:text-[16px] font-bold  text-lg break-words text-wrap `} >{note.title}</p>
