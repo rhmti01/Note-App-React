@@ -4,6 +4,7 @@ Welcome to **Note App React**, a user-friendly note-taking application built wit
 
 ## ✨ Features
 - 📝 **Add Notes**: Create new notes with a title and description effortlessly.
+- ✏️ **Edit Notes**: Modify existing notes to update your information anytime.
 - 🔄 **Sort Notes**: Organize your notes easily by:
 - ✅ **Mark as Completed**: Keep track of tasks you've completed.
 - 🗑 **Delete Notes**: Remove unwanted notes in one click.
@@ -25,7 +26,7 @@ The app has the following key components:
 - **AddNote**: A form to add new notes quickly.
 - **NotesList**: Displays all your notes in a clean, organized way.
 - **FilterNotes**: Lets you sort and filter notes based on your preferences.
-- **NoteItem**: A single note card with options to mark as completed or delete.
+- **NoteItem**: A single note card with options to edit, mark as completed, or delete.
 
 ## 🤝 Contributions
 Have suggestions or ideas? Feel free to contribute or share feedback on the GitHub repository:  
