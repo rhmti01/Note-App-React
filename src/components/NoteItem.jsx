@@ -20,9 +20,9 @@ function NoteItem({ note, onRemoveNote, onCompleteNote , onEditNote }) {
                 <div className="  flex items-center justify-around  pt-3 ss:basis-[22%] rr:basis-[20%] mm:basis-[19%] ww:basis-[23%] 2xl:basis-[21%] xl:gap-x-2.5 xg:gap-x-1.5 mm:gap-x-2 ss:gap-x-2   ">
                     <div
                         onClick={() => onEditNote(note.id)}
-                        class=" mx-1 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[9px] cursor-pointer  flex items-center justify-center  ring-[1.5px] outline-0 border-0 ring-offset-0 dark:ring-gray-300  ring-gray-600 " >
-                        <svg stroke="currentColor" class="  dark:stroke-gray-300 stroke-gray-700  w-3.5 h-3.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"  >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                        className=" mx-1 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[9px] cursor-pointer  flex items-center justify-center  ring-[1.5px] outline-0 border-0 ring-offset-0 dark:ring-gray-300  ring-gray-600 " >
+                        <svg stroke="currentColor" className="  dark:stroke-gray-300 stroke-gray-700  w-3.5 h-3.5  " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3"  >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                         </svg>
                     </div>
                     <input
