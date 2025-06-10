@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect } from "react";
+import { useState } from "react";
 import AddNewNote from "./components/AddNewNote.jsx";
 import NoteList from "./components/NoteList.jsx";
 import NoteStatus from "./components/NoteStatus.jsx";
@@ -8,6 +8,8 @@ import "/src/index.css";
 import "/src/App.css";
 import useLocalStorageReducer from "./hooks/useLocalStorageReducer.js";
 import useLocalStorageState from "./hooks/useLocalStorageState.js";
+import { Toaster } from "react-hot-toast";
+import useNoteNotification from "./hooks/useNoteNotification.js";
 
 // Reducer function for handling note actions
 function notesReducer(notes, action) {
@@ -46,25 +48,23 @@ function App() {
 
   const [sortBy, setSortBy] = useLocalStorageState("sortBy", "latest");
 
-  // const [sortBy, setSortBy] = useState(() => {
-  //   const savedSortBy = localStorage.getItem("sortBy");
-  //   return savedSortBy || "latest";
-  // });
-
   const [editModal, setModal] = useState(false);
   const [selectedNote, setSelectedNote] = useState(null);
 
   const handleAddNote = (newNote) => {
     dispatch({ type: "add", payload: newNote });
+    useNoteNotification("success");
   };
 
   const handleRemoveNote = (removedNoteId) => {
     dispatch({ type: "remove", payload: removedNoteId });
+    useNoteNotification("remove");
   };
 
   const handleCompleteNote = (e) => {
     const noteId = Number(e.target.value);
     dispatch({ type: "complete", payload: noteId });
+    useNoteNotification("complete");
   };
 
   const handleEditNote = (editableNoteId) => {
@@ -80,6 +80,7 @@ function App() {
       type: "edit",
       payload: { id: noteId, updatedTitle, updatedDescription },
     });
+    useNoteNotification("edit"); 
 
     setModal(false);
     setSelectedNote(null);
@@ -112,6 +113,7 @@ function App() {
 
   return (
     <div className="w-full 2xl:max-w-[1280px] xl:max-w-[1100px] flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10">
+      <Toaster/>
       {editModal && selectedNote && (
         <ModalOnEdit
           note={selectedNote}
