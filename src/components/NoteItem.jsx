@@ -10,14 +10,20 @@ function NoteItem({ note, onRemoveNote, onCompleteNote , onEditNote }) {
         minute: "2-digit",
     }
 
+    const priorityStyles = {
+    optional: "bg-gray-300 dark:bg-gray-400 text-gray-900",
+    normal: "bg-amber-300 dark:bg-amber-400 text-yellow-900",
+    urgent: "bg-red-300 dark:bg-red-400 text-red-900",
+    };
+
     return (
-        <div className={`  ${note.completed ? "bg-zinc-200 dark:bg-gray-800  ring-1 ring-slate-300 dark:ring-0  " : "bg-white dark:bg-slate-900/50   "}  w-full max-w-[575px] xg:my-2 xx:my-1.5 mm:my-1.5 ss:my-1 rounded-2xl shadow-mm z-auto  `}>
+        <div className={`  ${note.completed ? "bg-zinc-200 dark:bg-gray-800  ring-1 ring-slate-300 dark:ring-0  " : "bg-white dark:bg-slate-900/50   "}    w-full max-w-[575px] xg:my-2 xx:my-1.5 mm:my-1.5 ss:my-1 rounded-2xl shadow-mm z-auto  `}>
             <div className={`  ${note.completed ? " drop-shadow-lg dark:drop-shadow-none " : " "}  flex items-center justify-between w-full ss:pr-2 xx:pr-2  `} >
                 <div className=" 2xl:pl-5  xx:pl-[18px] mm:pl-3.5 ss:pl-3 basis-3/4 max-w-[75%] flex items-start justify-around flex-col ">
                     <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-900 dark:text-zinc-100 "} w-full xl:mt-4 xx:mt-3 mm:mt-2.5 ss:mt-2 2xl:text-lg xg:text-[17.5px] xx:text-[17.5px] mm:text-[16.6px] ss:text-[16px] font-bold  text-lg break-words text-wrap `} >{note.title}</p>
                     <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-400 dark:text-zinc-300 "} w-full 2xl:text-base xl:text-[15.5px] xg:text-[15px] xx:text-[14.5px] mm:text-[15px] ss:text-[14.5px] 2xl:mt-2 xl:mt-1.5 ss:mt-1  font-light  ss:pr-7 mm:pr-0 break-words text-wrap `}  >{note.description} </p>
                 </div>
-                <div className="  flex items-center justify-around  pt-3 ss:basis-[22%] rr:basis-[20%] mm:basis-[19%] ww:basis-[23%] 2xl:basis-[21%] xl:gap-x-2.5 xg:gap-x-1.5 mm:gap-x-2 ss:gap-x-2   ">
+                <div className="  flex items-center justify-around  pt-3 ss:basis-[22%] rr:basis-[20%] mm:basis-[19%] ww:basis-[23%] 2xl:basis-[21%] xl:gap-x-1 xg:gap-x-1 mm:gap-x-2 ss:gap-x-2   ">
                     <div
                         onClick={() => onEditNote(note.id)}
                         className=" mx-1 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[9px] cursor-pointer  flex items-center justify-center  ring-[1.5px] outline-0 border-0 ring-offset-0 dark:ring-gray-300  ring-gray-600 " >
@@ -38,9 +44,14 @@ function NoteItem({ note, onRemoveNote, onCompleteNote , onEditNote }) {
                 </div>
             </div>
             <div className=" bg-slate-300 dark:bg-slate-600 xl:mt-3 xx:mt-2 mm:mt-1.5 ss:mt-1 mb-2 w-[94%] h-[1px] mx-auto " ></div>
-            <p className={`  ${note.completed ? "text-slate-600  " : "text-zinc-500 dark:text-zinc-400 "}  2xl:pl-5 xl:pl-4 xx:pl-4 mm:pl-3.5 ss:pl-3  pb-1  my-2 2xl:text-sm xl:text-[13.5px] xx:text-[13px] mm:text-[13px] ss:text-[12.5px] font-medium  `} >
-                {new Date(note.createdAt).toLocaleDateString('en-US', options)}
-            </p>
+            <div className=" w-full flex justify-between  " >
+                <p className={`  ${note.completed ? "text-slate-600  " : "text-zinc-500 dark:text-zinc-400 "}  2xl:pl-5 xl:pl-4 xx:pl-4 mm:pl-3.5 ss:pl-3  pb-1  my-2 2xl:text-sm xl:text-[13.5px] xx:text-[13px] mm:text-[13px] ss:text-[12.5px] font-medium  `} >
+                    {new Date(note.createdAt).toLocaleDateString('en-US', options)}
+                </p>
+            <p className={`px-2 rounded-lg mr-5 flex items-center justify-center font-medium md:h-7 ss:h-6 md:text-[14.5px] ss:text-[13px] ${priorityStyles[note.priority]}`}>
+                    {note.priority}
+                </p>
+            </div>
         </div>
     )
 

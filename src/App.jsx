@@ -63,8 +63,11 @@ function App() {
 
   const handleCompleteNote = (e) => {
     const noteId = Number(e.target.value);
+    const completedNote = notes.find((note) => note.id === noteId);
     dispatch({ type: "complete", payload: noteId });
-    useNoteNotification("complete");
+    if (!completedNote.completed) {
+      useNoteNotification("complete");
+    }
   };
 
   const handleEditNote = (editableNoteId) => {
@@ -80,7 +83,7 @@ function App() {
       type: "edit",
       payload: { id: noteId, updatedTitle, updatedDescription },
     });
-    useNoteNotification("edit"); 
+    useNoteNotification("edit");
 
     setModal(false);
     setSelectedNote(null);
@@ -113,7 +116,7 @@ function App() {
 
   return (
     <div className="w-full 2xl:max-w-[1280px] xl:max-w-[1100px] flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10">
-      <Toaster/>
+      <Toaster />
       {editModal && selectedNote && (
         <ModalOnEdit
           note={selectedNote}
