@@ -34,6 +34,7 @@ function notesReducer(notes, action) {
               ...note,
               title: action.payload.updatedTitle,
               description: action.payload.updatedDescription,
+              priority : action.payload.updatedPriority
             }
           : note
       );
@@ -78,10 +79,10 @@ function App() {
     }
   };
 
-  const recordEditNote = (noteId, updatedTitle, updatedDescription) => {
+  const recordEditNote = (noteId, updatedTitle, updatedDescription , updatedPriority) => {
     dispatch({
       type: "edit",
-      payload: { id: noteId, updatedTitle, updatedDescription },
+      payload: { id: noteId, updatedTitle, updatedDescription , updatedPriority },
     });
     useNoteNotification("edit");
 
