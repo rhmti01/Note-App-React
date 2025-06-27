@@ -19,8 +19,6 @@ function AddNewNote({ onAddNote }) {
       priority: selectedNotePriority,
     };
 
-    console.log(newNote);
-
     setTitle("");
     setDescription("");
     setNotePriority(null);

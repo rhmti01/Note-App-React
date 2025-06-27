@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-function ModalOnEdit({ note, setModal, recordEditNote }) {
+function ModalOnEdit({ note, setEditModal, recordEditNote }) {
   const [title, setTitle] = useState(note.title);
   const [description, setDescription] = useState(note.description);
   const [priority,setPriority] = useState(note.priority)
 
   return (
-    <div className="fixed inset-0 bg-gray-900/50 z110 backdrop-blur-md flex items-center justify-center">
+    <div className="fixed inset-0 bg-gray-900/20 z110 backdrop-blur-md flex items-center justify-center">
+
       {/* space out of div */}
       <div
-        onClick={() => setModal(false)}
+        onClick={() => setEditModal(false)}
         class="  cursor-pointer  inset-0 absolute  w-full h-screen z-50  "
       ></div>
 

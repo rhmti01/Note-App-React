@@ -12,25 +12,25 @@ function NoteHeader({ sortBy, onSortNotes }) {
             value={sortBy}
             onChange={onSortNotes}
             id="sortType"
-            className=" 2xl:text-[15px] xg:text-[14px] xx:text-[14px] mm:text-[13.5px] ss:text-[13px] block xx:w-64 mm:w-[235px] ss:w-[230px] mm:p-2.5 ss:p-2 bg-gray-50 dark:bg-gray-900 border font-medium text-mm cursor-pointer border-gray-300 dark:border-gray-800 text-gray-900 dark:text-gray-100  rounded-lg focus:bg-indigo-50 dark:focus:bg-gray-900 focus:ring-indigo-500 focus:border-indigo-500  "
+            className=" 2xl:text-[15px] xg:text-[14px] xx:text-[14px] mm:text-[13.5px] ss:text-[13px] block xx:w-56 mm:w-[200px] ss:w-[190px] mm:p-2.5 ss:p-2 bg-gray-50 dark:bg-gray-900 border font-medium text-mm cursor-pointer border-gray-300 dark:border-gray-800 text-gray-900 dark:text-gray-100  rounded-lg focus:bg-indigo-50 dark:focus:bg-gray-900 focus:ring-indigo-500 focus:border-indigo-500  "
           >
             <option
               className=" 2xl:text-[15px] xx:text-[14px] mm:text-[13.5px] ss:text-[13px] "
               value="latest"
             >
-              Sort based on latest notes
+              Sort by latest notes
             </option>
             <option
               className=" 2xl:text-[15px] xx:text-[14px] mm:text-[13.5px] ss:text-[13px] "
               value="earliest"
             >
-              Sort based on earliest notes
+              Sort by earliest notes
             </option>
             <option
               className=" 2xl:text-[15px] xx:text-[14px] mm:text-[13.5px] ss:text-[13px] "
               value="completed"
             >
-              Sort based on completed notes
+              Sort by completed notes
             </option>
           </select>
         </form>
