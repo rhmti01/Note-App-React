@@ -4,6 +4,7 @@ Welcome to **Note App React**, a user-friendly note-taking application built wit
 
 ## ✨ Features
 - 📝 **Add Notes**: Create new notes with a title and description effortlessly.
+- 📝 **Note Priority**: Create new notes with action priority with better experience.
 - ✏️ **Edit Notes**: Modify existing notes to update your information anytime.
 - 🔄 **Sort Notes**: Organize your notes easily by:
 - ✅ **Mark as Completed**: Keep track of tasks you've completed.
@@ -20,6 +21,7 @@ This project is built using:
 - **CSS**: To make the app visually appealing.
 - **localStorage**: Ensures your notes are saved locally.
 - **Netlify**: Seamless and quick deployment.
+- **React-Hot-Toast**: Better and Friendly Notifications on notes' Manipulation.
 
 ## 📂 What’s Inside
 The app has the following key components:
