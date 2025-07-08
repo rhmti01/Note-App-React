@@ -14,7 +14,7 @@ function ModalOnEdit({ note, setEditModal, recordEditNote }) {
         class="  cursor-pointer  inset-0 absolute  w-full h-screen z-50  "
       ></div>
 
-      <div className=" xl:scale-100 xx:scale-[0.87] mm:scale-[0.85] rr:scale-[0.82] ss:scale-[0.80] bg-white dark:bg-gray-900 p-7 rounded-2xl w-[350px] md:w-[420px] z-50 dark:shadow-indigo-900 ">
+      <div className=" overflow-auto max-h-[calc(100vh-2rem)] xx:scale-[0.87] mm:scale-[0.85] rr:scale-[0.82] ss:scale-[0.80] bg-white dark:bg-gray-900 p-7 rounded-2xl w-[350px] md:w-[420px] z-50 dark:shadow-indigo-900 ">
         <h2 className="text-gray-900 dark:text-white text-center text-2xl font-bold">
           Edit Todo
         </h2>
