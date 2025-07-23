@@ -52,4 +52,9 @@ export default defineConfig({
     tailwindcss(),
     VitePWA(manifestForPlugIn)
   ],
+    test: {
+    globals : true ,
+    environment: 'jsdom',
+    setupFiles: ['./src/tests/setup.js'],
+  },
 })

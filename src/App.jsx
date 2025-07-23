@@ -18,6 +18,8 @@ import {
   removeTodo,
 } from "./features/todo/todoSlice.js";
 import useSyncTodosToLocalStorage from "./hooks/useSyncTodosToLocalStorage.js";
+import NoteBody from "./components/NoteBody.jsx";
+import NoteProvider from "./context/NoteContext.jsx";
 
 function App() {
   useSyncTodosToLocalStorage();
@@ -115,37 +117,36 @@ function App() {
     setSortBy(newSortBy);
   };
 
+  const noteHandlers = {
+    addNote: handleAddNote,
+    removeNote: handleRemoveNote,
+    completeNote: handleCompleteNote,
+    editNote: handleEditNote,
+    sortNotes: handleSortNotes,
+  };
+
   return (
-    <div className="w-full 2xl:max-w-[1280px] xl:max-w-[1100px] flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10">
-      <Toaster />
-      {editModal && selectEditNote && (
-        <ModalOnEdit
-          note={selectEditNote}
-          setEditModal={setEditModal}
-          recordEditNote={recordEditNote}
-        />
-      )}
-      {removeModal && selectRemoveNote && (
-        <ModalOnRemove
-          setRemoveModal={setRemoveModal}
-          note={selectRemoveNote}
-          recoredRemoveNote={recoredRemoveNote}
-        />
-      )}
-      <NoteHeader sortBy={sortBy} onSortNotes={handleSortChange} />
-      <div className="flex xx:items-start ss:items-center gap-y-9 justify-evenly xx:flex-row ss:flex-col w-full">
-        <AddNewNote onAddNote={handleAddNote} />
-        <div className="xg:basis-[47%] xx:basis-[50%] xx:w-full mm:w-[470px] ss:w-[90%] my-3">
-          <NoteStatus notes={notes} />
-          <NoteList
-            sortedNotes={handleSortNotes()}
-            onRemoveNote={handleRemoveNote}
-            onCompleteNote={handleCompleteNote}
-            onEditNote={handleEditNote}
+    <NoteProvider notes={notes} handlers={noteHandlers}>
+      <div className="w-full 2xl:max-w-[1280px] xl:max-w-[1100px] flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10">
+        <Toaster />
+        {editModal && selectEditNote && (
+          <ModalOnEdit
+            note={selectEditNote}
+            setEditModal={setEditModal}
+            recordEditNote={recordEditNote}
           />
-        </div>
+        )}
+        {removeModal && selectRemoveNote && (
+          <ModalOnRemove
+            setRemoveModal={setRemoveModal}
+            note={selectRemoveNote}
+            recoredRemoveNote={recoredRemoveNote}
+          />
+        )}
+        <NoteHeader sortBy={sortBy} onSortNotes={handleSortChange} />
+        <NoteBody />
       </div>
-    </div>
+    </NoteProvider>
   );
 }
 
