@@ -20,6 +20,7 @@ import {
 import useSyncTodosToLocalStorage from "./hooks/useSyncTodosToLocalStorage.js";
 import NoteBody from "./components/NoteBody.jsx";
 import NoteProvider from "./context/NoteContext.jsx";
+import { NoteDirProvider } from "./context/NoteDirContext.jsx";
 
 function App() {
   useSyncTodosToLocalStorage();
@@ -127,25 +128,27 @@ function App() {
 
   return (
     <NoteProvider notes={notes} handlers={noteHandlers}>
-      <div className="w-full 2xl:max-w-[1280px] xl:max-w-[1100px] flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10">
-        <Toaster />
-        {editModal && selectEditNote && (
-          <ModalOnEdit
-            note={selectEditNote}
-            setEditModal={setEditModal}
-            recordEditNote={recordEditNote}
-          />
-        )}
-        {removeModal && selectRemoveNote && (
-          <ModalOnRemove
-            setRemoveModal={setRemoveModal}
-            note={selectRemoveNote}
-            recoredRemoveNote={recoredRemoveNote}
-          />
-        )}
-        <NoteHeader sortBy={sortBy} onSortNotes={handleSortChange} />
-        <NoteBody />
-      </div>
+      <NoteDirProvider>
+        <div className="w-full 2xl:max-w-[1280px] xl:max-w-[1100px] flex items-center flex-col xg:pb-24 mm:pb-20 ss:pb-10">
+          <Toaster />
+          {editModal && selectEditNote && (
+            <ModalOnEdit
+              note={selectEditNote}
+              setEditModal={setEditModal}
+              recordEditNote={recordEditNote}
+            />
+          )}
+          {removeModal && selectRemoveNote && (
+            <ModalOnRemove
+              setRemoveModal={setRemoveModal}
+              note={selectRemoveNote}
+              recoredRemoveNote={recoredRemoveNote}
+            />
+          )}
+          <NoteHeader sortBy={sortBy} onSortNotes={handleSortChange} />
+          <NoteBody />
+        </div>
+      </NoteDirProvider>
     </NoteProvider>
   );
 }

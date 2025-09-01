@@ -1,13 +1,14 @@
+import SortDirection from "./SortDirection";
 import ThemeSwitch from "./ThemeSwitch";
 
 function NoteHeader({ sortBy, onSortNotes }) {
   return (
-    <div className="  w-full ss:pt-4 mm:pt-0 2xl:h-20 xl:h-[76px] xx:h-[70px] mm:h-[68px] ss:h-auto mm:py-0 ss:py-3 bg-white dark:bg-gray-900/40 ww:rounded-xl  ss:rounded-b-lg mm:rounded-xl flex items-center justify-around flex-wrap ss:gap-x-9 ss:px-5 mm:gap-y-0 ss:gap-y-3  2xl:mt-6 xl:mt-5 xx:mt-5 mm:mt-3 mm:w-[95%] ">
+    <div className="  w-full ss:pt-4 mm:pt-0 2xl:h-20 xl:h-[76px] xx:h-[70px] mm:h-[68px] ss:h-auto pp:py-0 ss:py-3 bg-white dark:bg-gray-900/40 ww:rounded-xl  ss:rounded-b-lg mm:rounded-xl flex items-center justify-around flex-wrap ss:gap-x-9 ss:px-5 mm:gap-y-0 ss:gap-y-3  2xl:mt-6 xl:mt-5 xx:mt-5 ww:mt-3 ww:w-[95%] ">
       <h2 className=" font-bold  2xl:text-[30px] xl:text-[28.5px] xg:text-[26px] xx:text-[24px] mm:text-[22px] ss:text-[22px] my-0  bg-gradient-to-r from-indigo-700 via-indigo-500 to-indigo-400 dark:bg-gradient-to-r  inline-block text-transparent bg-clip-text   ">
         Note App React{" "}
       </h2>
       <div className=" flex items-center justify-between rr:gap-x-5 ss:gap-x-2 ">
-        <form className="  ">
+        <form className=" flex justify-between items-center gap-x-3 ">
           <select
             value={sortBy}
             onChange={onSortNotes}
@@ -33,6 +34,7 @@ function NoteHeader({ sortBy, onSortNotes }) {
               Sort by completed notes
             </option>
           </select>
+          <SortDirection/>
         </form>
         <ThemeSwitch />
       </div>

@@ -17,7 +17,6 @@ function ModalOnRemove({recoredRemoveNote , setRemoveModal }) {
         <div className="flex justify-between md:mt-12 ss:mt-10">
           <button
             onClick={()=>{
-                console.log(3);
                 recoredRemoveNote()
             }}
             className="bg-gradient-to-tr from-red-700 to-red-600 text-white px-3 py-1.5 rounded-lg cursor-pointer font-medium"

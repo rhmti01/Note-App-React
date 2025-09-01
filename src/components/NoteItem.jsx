@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { useNoteDirContext } from "../context/NoteDirContext";
+
 function NoteItem({ note, onRemoveNote, onCompleteNote , onEditNote }) {
     const options = {
         year: "numeric",
@@ -12,18 +14,21 @@ function NoteItem({ note, onRemoveNote, onCompleteNote , onEditNote }) {
 
     const priorityStyles = {
     optional: "bg-gray-200 dark:bg-gray-200 text-gray-700",
-    normal: "bg-amber-200 dark:bg-amber-200 text-yellow-700",
+    normal: "bg-amber-100 dark:bg-amber-100 text-yellow-600",
     urgent: "bg-red-200 dark:bg-red-200 text-red-700",
     };
 
+    const {dir} = useNoteDirContext()
+    console.log(dir);
+
     return (
         <div className={`  ${note.completed ? " bg-zinc-200 dark:bg-gray-800  ring-1 ring-slate-300 dark:ring-0  " : "bg-white dark:bg-slate-900/50   "}    w-full max-w-[575px] xg:my-2 xx:my-1.5 mm:my-1.5 ss:my-1 rounded-2xl shadow-mm z-auto  `}>
-            <div className={`  ${note.completed ? " drop-shadow-lg dark:drop-shadow-none " : " "}  flex items-center justify-between w-full ss:pr-2 xx:pr-2  `} >
-                <div className=" 2xl:pl-5  xx:pl-[18px] mm:pl-3.5 ss:pl-3 basis-3/4 max-w-[75%] flex items-start justify-around flex-col ">
-                    <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-900 dark:text-zinc-100 "} w-full xl:mt-4 xx:mt-3 mm:mt-2.5 ss:mt-2 2xl:text-lg xg:text-[17.5px] xx:text-[17.5px] mm:text-[16.6px] ss:text-[16px] font-bold  text-lg break-words text-wrap `} >{note.title}</p>
-                    <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-400 dark:text-zinc-300 "} w-full 2xl:text-base xl:text-[15.5px] xg:text-[15px] xx:text-[14.5px] mm:text-[15px] ss:text-[14.5px] 2xl:mt-2 xl:mt-1.5 ss:mt-1  font-light  ss:pr-7 mm:pr-0 break-words text-wrap `}  >{note.description} </p>
+            <div className={`  ${note.completed ? " drop-shadow-lg dark:drop-shadow-none " : " "} ${dir =="rtl" ? "flex-row-reverse " : ""} flex items-center justify-between w-full ss:pr-2 xx:pr-2  `} >
+                <div className={`  ${dir =="rtl" ? "justify-around  2xl:pr-5  xx:pr-[18px] mm:pr-3.5 ss:pr-3 text-right " : " text-left justify-start 2xl:pl-5  xx:pl-[18px] mm:pl-3.5 ss:pl-3  "} basis-3/4 max-w-[75%] flex items-start  flex-col  ` }>
+                    <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-900 dark:text-zinc-100 "} w-full xl:mt-4 xx:mt-3 mm:mt-2.5 ss:mt-2 2xl:text-lg xg:text-[17.5px] xx:text-[17.5px] mm:text-[16.6px] ss:text-[16px] font-bold  text-lg ss:pl-0 mm:pr-0 break-words text-wrap `} >{note.title}</p>
+                    <p className={`  ${note.completed ? "text-slate-500 line-through " : "text-zinc-400 dark:text-zinc-300 "} w-full 2xl:text-base xl:text-[15.5px] xg:text-[15px] xx:text-[14.5px] mm:text-[15px] ss:text-[14.5px] 2xl:mt-2 xl:mt-1.5 ss:mt-1  font-light  ss:pr-0 mm:pr-0 break-words text-wrap `}  >{note.description} </p>
                 </div>
-                <div className="  flex items-center justify-around  pt-3 ss:basis-[22%] rr:basis-[20%] mm:basis-[19%] ww:basis-[23%] 2xl:basis-[21%] xl:gap-x-1 xg:gap-x-1 mm:gap-x-2 ss:gap-x-2   ">
+                <div className={`  ${dir == "ltr" ? "" : "flex-row-reverse"} pl-2  flex items-center justify-around  pt-3 ss:basis-[22%] rr:basis-[20%] mm:basis-[19%] ww:basis-[23%] 2xl:basis-[21%] xl:gap-x-1 xg:gap-x-1 mm:gap-x-2 ss:gap-x-2   `}>
                     <div
                         onClick={() => onEditNote(note.id)}
                         className=" mx-1 2xl:size-6 xl:size-5.5 mm:size-5.5 ss:size-5.5  rounded-[9px] cursor-pointer  flex items-center justify-center  ring-[1.5px] outline-0 border-0 ring-offset-0 dark:ring-gray-300  ring-gray-600 " >
