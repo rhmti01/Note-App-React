@@ -10,6 +10,7 @@ Welcome to **Note App React**, a user-friendly note-taking application built wit
 - 🗑 **Delete Notes**: Remove unwanted notes in one click.
 - 📊 **Filter Notes**: View "all notes," "open notes," or "completed notes" with ease.
 - 💾 **Persistent Storage**: Your notes are saved in localStorage, so your data stays safe even after refreshing the page.
+- 😎 **Easily sort rtl or ltr sort (persian and english notes) **
 
 ## 🚀 Live Demo
 Explore the app here: 👉 [Live Note App Demo](https://note-app-react-rhmti01.netlify.app/)
